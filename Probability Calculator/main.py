@@ -1,3 +1,4 @@
+"""Importing prob_calculator module"""
 import prob_calculator
 
 prob_calculator.random.seed(95)
@@ -9,4 +10,3 @@ probability = prob_calculator.experiment(
     num_balls_drawn=4,
     num_experiments=3000)
 print("Probability:", probability)
-

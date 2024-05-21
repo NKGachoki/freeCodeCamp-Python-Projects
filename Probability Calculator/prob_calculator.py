@@ -1,7 +1,9 @@
+"""Importing random and copy modules"""
 import random
 import copy
 
 class Hat:
+    """Class representing instances of Hat class and balls therein"""
     def __init__(self, **kwargs):
         self.kwargs = kwargs
         self.contents = []
@@ -11,6 +13,7 @@ class Hat:
 
 
     def draw(self, no_of_balls):
+        """Method to randomly draw a specific number of balls from Hat instance"""
         if no_of_balls >= len(self.contents):
             return self.contents
         else:
@@ -18,15 +21,16 @@ class Hat:
             for i in drawn_balls:
                 self.contents.remove(i)
             return drawn_balls
-        
+
 def experiment(**kwargs):
+    """Function to return probability of drawing specific balls from Hat instance"""
     values = list(kwargs.values())
     hat_contents = values[0].contents
     expected_balls = []
     for key, value in values[1].items():
         for i in range(value):
             expected_balls.append(key)
-    
+
     count = 0
     for i in range(values[3]):
         deductions = 0
@@ -41,6 +45,6 @@ def experiment(**kwargs):
                     continue
         if deductions == len(expected_balls):
             count += 1
-       
+
     probability = count/values[3]
     return probability
