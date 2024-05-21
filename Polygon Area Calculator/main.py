@@ -1,4 +1,6 @@
-from shape_calculator import *
+"""Importing Rectangle and Square Classes and methods therein"""
+
+from shape_calculator import Rectangle, Square
 
 rect = Rectangle(10, 5)
 print(rect.get_area())
