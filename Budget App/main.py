@@ -1,4 +1,5 @@
-from budget import *
+"""Module containing the necessary class, methods and function to run main file"""
+from budget import Category, create_spend_chart
 
 food = Category("Food")
 food.deposit(1000, "initial deposit")
