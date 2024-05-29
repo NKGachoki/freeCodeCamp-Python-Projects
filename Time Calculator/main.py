@@ -1,10 +1,20 @@
-# Program to calculate added time in 12hr clock format.
-
+"""Importing add_time function from time_calculator module"""
 from time_calculator import add_time
 
-print(add_time("12:56 PM", "546:12", "SATURDAY"))
-print(add_time("1:39 AM", "24:10"))
-print(add_time("6:00 PM", "5678:04", "Tuesday"))
-print(add_time("7:16 AM", "15:00"))
-print(add_time("5:21 PM", "15:40", "WeDnEsDaY"))
-print(add_time("11:17 AM", "10000:50", "Monday"))
+print(add_time('3:00 PM', '3:10'))
+# Returns: 6:10 PM
+
+print(add_time('11:30 AM', '2:32', 'Monday'))
+# Returns: 2:02 PM, Monday
+
+print(add_time('11:43 AM', '00:20'))
+# Returns: 12:03 PM
+
+print(add_time('10:10 PM', '3:30'))
+# Returns: 1:40 AM (next day)
+
+print(add_time('11:43 PM', '24:20', 'tueSday'))
+# Returns: 12:03 AM, Thursday (2 days later)
+
+print(add_time('6:30 PM', '205:12'))
+# Returns: 7:42 AM (9 days later)
