@@ -153,9 +153,9 @@ def add_time(start_time, duration, day=None):
             elif new_minutes >= 10 and number_days > 1:
                 new_time = f"{str(new_adjusted_hours)}:{str(new_minutes)} {am_pm}, {result_day} ({number_days} days later)"
             elif new_adjusted_hours == 12 and new_minutes < 10 and am_pm == 'AM':
-                new_time = f"{str(new_adjusted_hours)}:0{str(new_minutes)} {am_pm}, {adjust_time.iterate_once(day)} (next day)"
+                new_time = f"{str(new_adjusted_hours)}:0{str(new_minutes)} {am_pm}, {adjust_time.move_once(day)} (next day)"
             elif new_adjusted_hours == 12 and new_minutes >= 10 and am_pm == 'AM':
-                new_time = f"{str(new_adjusted_hours)}:{str(new_minutes)} {am_pm}, {adjust_time.iterate_once(day)} (next day)"
+                new_time = f"{str(new_adjusted_hours)}:{str(new_minutes)} {am_pm}, {adjust_time.move_once(day)} (next day)"
             elif new_minutes < 10 and number_days == 1:
                 new_time = f"{str(new_adjusted_hours)}:0{str(new_minutes)} {am_pm}, {result_day} (next day)"
             elif new_minutes >= 10 and number_days == 1:
@@ -180,9 +180,9 @@ def add_time(start_time, duration, day=None):
             elif total_minutes >= 10 and number_days > 1:
                 new_time = f"{str(new_adjusted_hours)}:{str(total_minutes)} {am_pm}, {result_day} ({number_days} days later)"
             elif new_adjusted_hours == 12 and total_minutes < 10 and am_pm == 'AM':
-                new_time = f"{str(new_adjusted_hours)}:0{str(total_minutes)} {am_pm}, {adjust_time.iterate_once(day)} (next day)"
+                new_time = f"{str(new_adjusted_hours)}:0{str(total_minutes)} {am_pm}, {adjust_time.move_once(day)} (next day)"
             elif new_adjusted_hours == 12 and total_minutes >= 10 and am_pm == 'AM':
-                new_time = f"{str(new_adjusted_hours)}:{str(total_minutes)} {am_pm}, {adjust_time.iterate_once(day)} (next day)"
+                new_time = f"{str(new_adjusted_hours)}:{str(total_minutes)} {am_pm}, {adjust_time.move_once(day)} (next day)"
             elif total_minutes < 10 and number_days == 1:
                 new_time = f"{str(new_adjusted_hours)}:0{str(total_minutes)} {am_pm}, {result_day} (next day)"
             elif total_minutes >= 10 and number_days == 1:
@@ -197,9 +197,9 @@ def add_time(start_time, duration, day=None):
                     am_pm = 'AM'
 
                 if new_adjusted_hours == 12 and new_minutes < 10 and am_pm == 'AM':
-                    new_time = f"{str(new_adjusted_hours)}:0{str(new_minutes)} {am_pm}, {adjust_time.iterate_once(day)} (next day)"
+                    new_time = f"{str(new_adjusted_hours)}:0{str(new_minutes)} {am_pm}, {adjust_time.move_once(day)} (next day)"
                 elif new_adjusted_hours == 12 and new_minutes >= 10 and am_pm == 'AM':
-                    new_time = f"{str(new_adjusted_hours)}:{str(new_minutes)} {am_pm}, {adjust_time.iterate_once(day)} (next day)"
+                    new_time = f"{str(new_adjusted_hours)}:{str(new_minutes)} {am_pm}, {adjust_time.move_once(day)} (next day)"
             else:
                 if new_hours == 0:
                     new_hours += 12
@@ -216,9 +216,9 @@ def add_time(start_time, duration, day=None):
                 capitalized_day = lower_day.capitalize()
 
                 if new_hours == 12 and new_minutes < 10 and am_pm == 'AM':
-                    new_time = f"{str(new_hours)}:0{str(new_minutes)} {am_pm}, {adjust_time.iterate_once(day)} (next day)"
+                    new_time = f"{str(new_hours)}:0{str(new_minutes)} {am_pm}, {adjust_time.move_once(day)} (next day)"
                 elif new_hours == 12 and new_minutes >= 10 and am_pm == 'AM':
-                    new_time = f"{str(new_hours)}:{str(new_minutes)} {am_pm}, {adjust_time.iterate_once(day)} (next day)"
+                    new_time = f"{str(new_hours)}:{str(new_minutes)} {am_pm}, {adjust_time.move_once(day)} (next day)"
                 elif new_minutes < 10:
                     new_time = f"{str(new_hours)}:0{str(new_minutes)} {am_pm}, {capitalized_day}"
                 else:
@@ -241,9 +241,9 @@ def add_time(start_time, duration, day=None):
             capitalized_day = lower_day.capitalize()
 
             if total_hours == 12 and total_minutes < 10 and am_pm == 'AM':
-                new_time = f"{str(total_hours)}:0{str(total_minutes)} {am_pm}, {adjust_time.iterate_once(day)} (next day)"
+                new_time = f"{str(total_hours)}:0{str(total_minutes)} {am_pm}, {adjust_time.move_once(day)} (next day)"
             elif total_hours == 12 and total_minutes >= 10 and am_pm == 'AM':
-                new_time = f"{str(total_hours)}:{str(total_minutes)} {am_pm}, {adjust_time.iterate_once(day)} (next day)"
+                new_time = f"{str(total_hours)}:{str(total_minutes)} {am_pm}, {adjust_time.move_once(day)} (next day)"
             elif total_minutes < 10:
                 new_time = f"{str(total_hours)}:0{str(total_minutes)} {am_pm} {capitalized_day}"
             else:

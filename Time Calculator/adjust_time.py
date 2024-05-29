@@ -19,9 +19,6 @@ def adjust_hours_1(hours):
         hours = hours - 24
         no_of_days = no_of_days + 1
 
-    # if hours == 0:
-    #     return hours + 12, no_of_days
-    # else:
     return hours, no_of_days
 
 def adjust_hours_minutes_2(hours,minutes):
@@ -53,8 +50,8 @@ def adjust_hours_2(hours, day):
 
     return hours, capitalized_day, count
 
-def iterate_once(day):
-    """Function to iterate a circular linked list once"""
+def move_once(day):
+    """Function to move to next node in a circular linked list"""
     lower_day = day.lower()
     count = 1
     week = CircularLinkedList()
