@@ -4,8 +4,8 @@ from circular_linked_list import CircularLinkedList
 def adjust_hours_minutes_1(hours,minutes):
     """Function to adjust hours + minutes during 1st instance of "add_time" function call"""
     while minutes >= 60:
-        minutes = minutes - 60
-        hours = hours + 1
+        minutes -= 60
+        hours += 1
         if minutes >= 60:
             adjust_hours_minutes_1(hours, minutes)
         else:
@@ -16,16 +16,16 @@ def adjust_hours_1(hours):
     """Function to adjust hours + number of days during 1st instance of "add_time" function call"""
     no_of_days = 0
     while hours >= 24:
-        hours = hours - 24
-        no_of_days = no_of_days + 1
+        hours -= 24
+        no_of_days += 1
 
     return hours, no_of_days
 
 def adjust_hours_minutes_2(hours,minutes):
     """Function to adjust hours + minutes during 2nd instance of "add_time" function call"""
     while minutes >= 60:
-        minutes = minutes - 60
-        hours = hours + 1
+        minutes -= 60
+        hours += 1
         if minutes >= 60:
             adjust_hours_minutes_2(hours, minutes)
         else:
@@ -42,8 +42,8 @@ def adjust_hours_2(hours, day):
         week.insert(day_of_week)
 
     while hours >= 24:
-        hours = hours - 24
-        count = count + 1
+        hours -= 24
+        count += 1
 
     result_day = week.iterate(lower_day, count)
     capitalized_day = result_day.capitalize()
